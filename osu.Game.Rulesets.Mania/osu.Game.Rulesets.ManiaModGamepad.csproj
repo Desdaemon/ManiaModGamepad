@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Project">
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyTitle>osu.Game.Rulesets.ManiaModGamepad</AssemblyTitle>
+    <OutputType>Library</OutputType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RootNamespace>osu.Game.Rulesets.ManiaModGamepad</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.3.3" />
+    <PackageReference Include="ppy.osu.Game" Version="2024.412.1" />
+    <Reference Include="osu.Game.Rulesets.Mania">
+      <HintPath>..\lib\osu.Game.Rulesets.Mania.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
