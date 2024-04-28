@@ -212,8 +212,15 @@ namespace osu.Game.Rulesets.Mania.Mods
             }
             else
             {
+                bool[] activeMaskHand = leftHand ? ActiveMask[..3] : ActiveMask[3..];
                 foreach (var ho in orderedHand)
-                    yield return ho;
+                {
+                    if (handIsCompatible(activeMaskHand, ho.Column))
+                    {
+                        activeMaskHand[ho.Column % 3] = true;
+                        yield return ho;
+                    }
+                }
             }
         }
 
@@ -225,6 +232,7 @@ namespace osu.Game.Rulesets.Mania.Mods
             int nextFreeHoldSpace = Array.FindIndex(leftHand ? LeftHoldColumns : RightHoldColumns, ObjectExtensions.IsNull);
             if (nextFreeHoldSpace == -1) return;
 
+            // TODO: Try multiple hold notes before returning
             holdNote = hand.OfType<HoldNote>().MaxBy(h => h.EndTime);
             if (holdNote.IsNull()) return;
 
