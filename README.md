@@ -7,11 +7,13 @@ An unofficial osu!mania conversion mod for gamepad players.
 This mod is only available for osu!lazer. Please also check [Limitations](#limitations)
 to see if this mod suits your play style.
 
+[![Demo](https://img.youtube.com/vi/NcdVmPx8OHY/hqdefault.jpg)](https://youtu.be/NcdVmPx8OHY?si=Jev-6CwarAEA-75K)
+
 ###### Harmony
 
 Download the latest release of [Harmony](https://github.com/pardeike/Harmony/releases/latest)
 and copy `0Harmony.dll` to the `rulesets` folder, in your osu!lazer installation.  
-The folder can be found by clicking `Open osu! location` in the setings sidebar.
+The folder can be found by clicking `Open osu! folder` in the setings sidebar.
 
 This only needs to be downloaded once, unless this mod has issues with the current version of
 Harmony being used.
